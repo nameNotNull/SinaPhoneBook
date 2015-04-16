@@ -66,7 +66,7 @@ public class ContactFragment extends ListFragment {
 	  public void onCreate(Bundle savedInstanceState) {
 	    // TODO Auto-generated method stub
 	    super.onCreate(savedInstanceState);
-	    setContentView(R.layout.contactfragment);
+	  //  setContentView(R.layout.contactfragment);
 	    data = new ArrayList<String>();
 	   
 	    manager = getFragmentManager();
@@ -187,16 +187,37 @@ public class ContactFragment extends ListFragment {
 		}
 
 		public View getView(int position, View convertView, ViewGroup parent) {
-			ImageView iamge = null;
+			ViewHolder holder;
+			 
+			 if (convertView == null) {
+				 convertView = LayoutInflater.from(mContext).inflate(
+							R.layout.contact_list_items, null);
+			 holder = new ViewHolder();
+			 holder.image = (ImageView) convertView.findViewById(R.id.color_image);
+			 holder.title = (TextView) convertView.findViewById(R.id.color_title);
+			 //holder.text = (TextView) convertView.findViewById(R.id.color_text);
+			
+			 convertView.setTag(holder);
+			} else {
+			holder = (ViewHolder) convertView.getTag();
+			}
+			// 绘制联系人名称
+			 holder.title.setText(mContactsName.get(position));
+				// 绘制联系人号码
+			// holder.text.setText(mContactsNumber.get(position));
+				// 绘制联系人头像
+			 holder.image.setImageBitmap(mContactsPhonto.get(position));
+			return convertView;
+			/*ImageView iamge = null;
 			TextView title = null;
 			TextView text = null;
 			if (convertView == null) {
 				convertView = LayoutInflater.from(mContext).inflate(
 						R.layout.contact_list_items, null);
 
-				iamge = (ImageView) convertView.findViewById(R.id.color_image);
-				title = (TextView) convertView.findViewById(R.id.color_title);
-				text = (TextView) convertView.findViewById(R.id.color_text);
+				//iamge = (ImageView) convertView.findViewById(R.id.color_image);
+				//title = (TextView) convertView.findViewById(R.id.color_title);
+				//text = (TextView) convertView.findViewById(R.id.color_text);
 			}
 			// 绘制联系人名称
 			title.setText(mContactsName.get(position));
@@ -204,9 +225,15 @@ public class ContactFragment extends ListFragment {
 			text.setText(mContactsNumber.get(position));
 			// 绘制联系人头像
 			iamge.setImageBitmap(mContactsPhonto.get(position));
-			return convertView;
+			return convertView;*/
 		}
 
 	}
+	static class ViewHolder {
+		
+		ImageView image;
+		TextView title;
+		//TextView text;
+		}
 
 }
