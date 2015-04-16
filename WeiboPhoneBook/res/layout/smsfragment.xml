@@ -4,12 +4,20 @@
     android:layout_height="match_parent"  
     android:orientation="vertical" >  
   
-    <TextView  
+     <TextView  
+        android:id="@+id/smsid"
         android:layout_width="fill_parent"  
-        android:layout_height="fill_parent"  
+        android:layout_height="wrap_content"  
         android:gravity="center"  
-        android:text="sms的fragment"  
         android:textSize="20sp"  
-        android:textStyle="bold" />  
+        android:textStyle="bold" /> 
+         <TextView  
+        android:id="@+id/smsid"
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"  
+        android:gravity="center" 
+        android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" 
+        android:textSize="20sp"  
+        android:textStyle="bold" /> 
   
 </LinearLayout>  
