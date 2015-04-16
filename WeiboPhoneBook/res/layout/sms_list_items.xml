@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    android:orientation="vertical" >  
+      <ImageView
+        android:id="@+id/smsimg"
+        android:layout_width="40dip"
+        android:layout_height="50dip"
+        android:layout_marginTop="10dip"
+        android:src="@drawable/avatar_default_48h"
+        android:layout_marginBottom="10dip" />
+
+    <TextView
+        android:id="@+id/smstext1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dip"
+        android:layout_marginLeft="10dip"
+        android:layout_toRightOf="@+id/smsimg"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:textSize="20dip" />
+    
+    	<TextView android:id="@+id/smstext2"    
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		 android:layout_marginLeft="10dip" 
+		android:layout_toRightOf="@+id/smsimg"       
+		android:layout_below="@+id/smstext1"    
+		android:layout_alignParentBottom="true"    
+		android:layout_alignParentRight="true"     
+		android:singleLine="true"    
+		android:ellipsize="marquee"     
+		android:textSize="15dip" />
+   
+    <!--    <TextView  
+        android:id="@+id/smstext1"
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"  
+        android:gravity="center"  
+        android:text="sms的fragment"  
+        android:textSize="20sp"  
+        android:textStyle="bold" />  --> 
+       
+     
+           
+  
+</RelativeLayout>  
