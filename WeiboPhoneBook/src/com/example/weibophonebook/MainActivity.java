@@ -43,8 +43,8 @@ public class MainActivity extends Activity {
 	private void setDefaultFragment() {
 		FragmentManager fm = getFragmentManager();
 		FragmentTransaction transaction = fm.beginTransaction();
-		mCaller = new CallerFragment();
-		transaction.replace(R.id.id_content, mCaller);
+		mContact = new ContactFragment();
+		transaction.replace(R.id.id_content, mContact);
 		transaction.commit();
 	}
 
