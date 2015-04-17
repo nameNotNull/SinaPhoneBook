@@ -29,5 +29,16 @@
         <item name="android:paddingTop">6.0dip</item>
         <item name="android:paddingBottom">5.0dip</item>
     </style>
-    
+    <style name="dial_keyboard_button">
+        <item name="android:paddingLeft">0.0dip</item>
+        <item name="android:paddingTop">2.0px</item>
+        <item name="android:paddingRight">0.0dip</item>
+        <item name="android:paddingBottom">0.0dip</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:soundEffectsEnabled">false</item>
+    </style>
+ 
 </resources>

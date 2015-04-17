@@ -3,16 +3,18 @@ package com.example.weibophonebook;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.ComponentName;
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.TransactionTooLargeException;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity  {
 
 	public TextView bottomLeftTextView = null;
 	public TextView bottomMiddleTextView = null;
@@ -97,7 +99,26 @@ public class MainActivity extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
+		
 		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		switch (item.getItemId()) {
+	    case R.id.action_settings:
+	    	Intent intent = new Intent();  
+	    	intent.setComponent(new ComponentName("com.sina.weibo","com.sina.weibo.EditActivity")); 
+	    	intent.setAction(Intent.ACTION_VIEW);  
+	    	startActivity(intent); 
+	    	 Toast.makeText(this, "删除菜单被点击了", Toast.LENGTH_LONG).show();
+	         break;
+	    default:
+		  	 break;
+
+	    }
+		return super.onOptionsItemSelected(item);
 	}
 
 }
